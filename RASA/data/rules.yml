@@ -1,0 +1,22 @@
+version: "3.1"
+
+rules:
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: Respond to component details query
+  steps:
+  - intent: ask_component_details
+  - action: action_provide_component_details
+
+- rule: Respond to component price query
+  steps:
+  - intent: ask_component_price
+  - action: action_provide_component_price
